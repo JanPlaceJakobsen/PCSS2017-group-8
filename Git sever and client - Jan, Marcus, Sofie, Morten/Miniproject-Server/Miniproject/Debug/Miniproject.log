@@ -1,0 +1,29 @@
+﻿  stdafx.cpp
+  Miniproject.cpp
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(75): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'ULONG'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(97): error C2065: 'slen': undeclared identifier
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(98): error C2065: 'slen': undeclared identifier
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(103): error C2065: 'slen': undeclared identifier
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(120): error C2065: 'slen': undeclared identifier
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(121): error C2065: 'slen': undeclared identifier
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(126): error C2065: 'slen': undeclared identifier
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(148): error C2059: syntax error: 'for'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(148): error C2143: syntax error: missing ')' before ';'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(148): error C2143: syntax error: missing ';' before '<'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(148): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(148): error C2143: syntax error: missing ';' before '++'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(148): error C2086: 'int i': redefinition
+  c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(148): note: see declaration of 'i'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(148): error C2059: syntax error: ')'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(149): error C2143: syntax error: missing ';' before '{'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(149): error C2447: '{': missing function header (old-style formal list?)
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(157): error C2059: syntax error: 'for'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(157): error C2143: syntax error: missing ')' before ';'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(157): error C2143: syntax error: missing ';' before '<'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(157): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(157): error C2086: 'int i': redefinition
+  c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(148): note: see declaration of 'i'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(157): error C2143: syntax error: missing ';' before '++'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(157): error C2059: syntax error: ')'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(158): error C2143: syntax error: missing ';' before '{'
+c:\users\toryn\source\repos\miniproject-server\miniproject\miniproject.cpp(158): error C2447: '{': missing function header (old-style formal list?)
