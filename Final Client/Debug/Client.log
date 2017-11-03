@@ -1,0 +1,4 @@
+﻿  Client.cpp
+c:\users\casper\onedrive - aalborg universitet 1\pcss\server and client\client\snailgame.h(96): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\casper\onedrive - aalborg universitet 1\pcss\server and client\client\snailgame.h(103): warning C4715: 'Dice': not all control paths return a value
+  Client.vcxproj -> C:\Users\casper\OneDrive - Aalborg Universitet 1\PCSS\Server and client\Debug\Client.exe
