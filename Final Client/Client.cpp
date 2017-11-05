@@ -25,6 +25,9 @@ char* ErrorMessage(char*, int);
 //Function for checking if two char arrays are alike
 bool cstrCheck(const char*, const char*);
 
+//Function for initializing winsock
+void InitWinsock();
+
 /*Currently not in use...*/
 ////Function for recieving messeges over thread
 //void recieveMSG(SOCKET);
@@ -81,7 +84,7 @@ int main() {
 	//}
 
 	std::this_thread::sleep_for(DEFAULT_SLEEP_SIZE);
-	int k = 0;
+
 	while (true) {
 
 		if (findWinner(iName)) break;
@@ -93,7 +96,6 @@ int main() {
 		//Run game code
 		if (cstrCheck(buf, "/your turn")) {
 			//The string for what happened with the snail
-			printf("AHA!\n");
 			std::string turn = yourTurn(iName);
 			char msg[DEFAULT_BUFFER_SIZE];
 			strcpy(msg, turn.c_str());
@@ -129,12 +131,8 @@ int main() {
 			char recvDie[DEFAULT_BUFFER_SIZE];
 			recv(clientSocket, recvDie, DEFAULT_BUFFER_SIZE, NULL);
 
-			printf("hit%d", k++);
-
 			char recvName[DEFAULT_BUFFER_SIZE];
 			int checkBytes = recv(clientSocket, recvName, DEFAULT_BUFFER_SIZE, NULL);
-
-			printf("hit%d", k++);
 
 			std::string tempname;
 			tempname.append(recvName, recvName + checkBytes);
