@@ -27,7 +27,7 @@ int Dice(); // Dice function
 
 
 int pos[3] = { 0,0,0 }; // the position of the snails - will store how far down the track the individual snails is.
-int Snailpos;			// players snail position
+//int Snailpos;			// players snail position
 int diceThrow;			//clobal enheritable variable for current dice throw
 
 /*Currently not needed...*/
@@ -87,7 +87,7 @@ std::string yourTurn(int i)
 	printf("your new position is: %d\n\n", pos[i]);
 
 	//return value to send to other players.
-	return ("\nSnail" + std::to_string(i) + " proceeded with " + std::to_string(diceThrow) + " and is now on position " + std::to_string(Snailpos) + /*check for a winner snail(your snail)*/(Snailpos >= 20 ? "\n Snail " + std::to_string(i) + " wins!" : "\n") + /*Are you leading the pack?*/ (pos[i] > pos[i + 1 % 3] && pos[i] > pos[i + 2 % 3] ? "Snail" + std::to_string(i) + " is the leader of the pack!\n" : "\n"));
+	return ("\nSnail" + std::to_string(i) + " proceeded with " + std::to_string(diceThrow) + " and is now on position " + std::to_string(pos[i]) + /*Are you leading the pack?*/ (pos[i] > pos[i + 1 % 3] && pos[i] > pos[i + 2 % 3] ? "Snail" + std::to_string(i) + " is the leader of the pack!\n" : "\n"));
 }
 
 int Dice() {
