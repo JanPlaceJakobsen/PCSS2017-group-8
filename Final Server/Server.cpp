@@ -72,9 +72,18 @@ int main() {
 		std::string msg = "client" + std::to_string(numbclients) + ":";
 		send(acceptSocket, msg.data(), msg.size(), NULL);
 		numbclients++;
+		
+		
 
 		//assign the accepted socket to the clients array
 		clients[i] = acceptSocket;
+			char buf[DEFAULT_BUFFER_SIZE] = "\n WELCOME TO THE FANTACTIC FANTASTICAL SNAIL RACE EVER IN HISTORY OF ALL TIME AND FOREVER!\n                                   -AND EVER!";
+			send(clients[i], buf, DEFAULT_BUFFER_SIZE, NULL);
+			char buffer[DEFAULT_BUFFER_SIZE] = "\n\n We are still missing a few snailriders for the race to begin. Please wait\n\n";
+			send(clients[i], buffer, DEFAULT_BUFFER_SIZE, NULL);
+		
+
+
 
 		////Create thread for communication over the newly connected socket
 		//t1[i] = std::thread(lobby, i);	//Run a lobby for all connections, which indepentadly checks for updated messages.
@@ -97,6 +106,8 @@ int main() {
 			//The first thing send to the client resolves in a username, so some data needs to be send first!
 			std::string noName = "NoName";
 			send(acceptSocket, noName.data(), noName.size(), NULL);
+			
+		
 
 			//Send a message that the server is regrettably full at the moment!
 			std::string msg = "We're incredibly sorry, but as of this moment the game server is full!\nCome back another time :)!\n";
@@ -113,10 +124,8 @@ int main() {
 
 	//Send the message for the game lobby being full, and send command for game to start
 	for (int i = 0; i < MAX_CLIENTS; i++) {
-		char buf[DEFAULT_BUFFER_SIZE] = "The max number of participants have been met and the chat has\nbeen turned off!\nThe game is ready to start! Everyone go to your snails and prepare for takeof!\n\n";
+		char buf[DEFAULT_BUFFER_SIZE] = "\n\n The max number of participants have been met \nThe game is ready to start! Everyone go to your snails and prepare for takeof!\n\n";
 		send(clients[i], buf, DEFAULT_BUFFER_SIZE, NULL);
-		char buffer[DEFAULT_BUFFER_SIZE] = "\nWELCOME TO THE FANTACTIC FANTASTICAL SNAIL RACE EVER IN HISTORY OF ALL TIME AND FOREVER!\n                                   -AND EVER!";
-		send(clients[i], buffer, DEFAULT_BUFFER_SIZE, NULL);
 	}
 
 	std::this_thread::sleep_for(std::chrono::seconds(1));
@@ -162,6 +171,7 @@ int main() {
 	WSACleanup();
 	system("PAUSE");
 	return 0;
+	
 }
 
 //Sends error messages and displays where in the code they are localiced, as well as ending the code with an error
@@ -226,3 +236,4 @@ bool cstrCheck(const char* a, const char* b) {
 	}
 	return true;
 }
+
