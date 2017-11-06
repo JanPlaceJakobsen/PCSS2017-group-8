@@ -144,7 +144,6 @@ int main() {
 
 		//If recieved message = "/end turn", send "/your turn"  to next client
 		if (cstrCheck(buf, "/end turn")) {
-			printf("Ending turn...");
 			std::this_thread::sleep_for(std::chrono::seconds(1));
 			i = (i + 1) % MAX_CLIENTS;					//Specifies which client is next (cycles between 0 1 and 2)
 			char bufer[DEFAULT_BUFFER_SIZE] = "/your turn";
