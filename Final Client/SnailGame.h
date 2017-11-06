@@ -1,4 +1,3 @@
-
 // THE MOST FANTACTIC FANTASTICAL SNAIL RACE EVER IN HISTORY OF ALL TIME AND FOREVER!
 //                                                                                    - AND EVER!
 
@@ -74,7 +73,7 @@ std::string yourTurn(int i)
 	printf("\nHey look! It is your turn, player %d!\n", (i));
 	//_________________________________Roll dice
 	std::string input;
-	printf("roll the die\n\n");
+	printf("roll the die! Type: roll\n\n");
 
 	std::string checkRoll;
 	while (checkRoll != "roll") {
@@ -112,7 +111,7 @@ bool findWinner(int index) {
 		return true;
 	}
 	if (pos[1] >= WINNING_POSITION) {
-		if (index == 1) {
+		if (index+48 == 1) {
 			printf("\n\nYOU WIN!\n\n");
 			return true;
 		}
@@ -120,7 +119,7 @@ bool findWinner(int index) {
 		return true;
 	}
 	if (pos[2] >= WINNING_POSITION) {
-		if (index == 2) {
+		if (index+48 == 2) {
 			printf("\n\nYOU WIN!\n\n");
 			return true;
 		}
